@@ -1,0 +1,64 @@
+* {
+    width: 99.5%;
+    margin: auto;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+#float-box {
+    background-color: blanchedalmond;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+#quote-title {
+    font-size: 32px;
+    text-align: center;
+}
+
+#tweet {
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#get-quote {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#quote-msg {
+    clear: both;
+    font-size: 24px;
+    font-style: italic;
+    position: relative;
+    float: left;
+    text-align: center;
+    margin-top: 1%;
+}
+
+#quote-author {
+    margin-top: 2%;
+    clear: both;
+    font-size: 18px;
+    position: relative;
+    float: right;
+    text-align: right;
+    margin-right: 10%;
+    margin-bottom: 1%;
+}
+
+#signature {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 2%;
+}

@@ -1,0 +1,284 @@
+query
+    : {
+        count: 1,
+        created: "2017-01-30T23:30:59Z",
+        lang: "en-US",
+        …
+    }
+count
+    :
+    1
+created
+    :
+    "2017-01-30T23:30:59Z"
+lang
+    :
+    "en-US"
+results
+    : {
+        channel: {
+            units: {
+                distance: "km",
+                pressure: "mb",
+                speed: "km/h",
+                temperature: "C"
+            },
+            …
+        }
+    }
+channel
+    : {
+        units: {
+            distance: "km",
+            pressure: "mb",
+            speed: "km/h",
+            temperature: "C"
+        },
+        …
+    }
+astronomy
+    : {
+        sunrise: "6:43 am",
+        sunset: "7:55 pm"
+    }
+atmosphere
+    : {
+        humidity: "90",
+        pressure: "31459.56",
+        rising: "0",
+        visibility: "25.11"
+    }
+description
+    :
+    "Yahoo! Weather for Santo Andre, SP, BR"
+image
+    : {
+        title: "Yahoo! Weather",
+        width: "142",
+        height: "18",
+        link: "http://weather.yahoo.com",
+        …
+    }
+height
+    :
+    "18"
+link
+    :
+    "http://weather.yahoo.com"
+title
+    :
+    "Yahoo! Weather"
+url
+    :
+    "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+width
+    :
+    "142"
+item
+    : {
+        title: "Conditions for Santo Andre, SP, BR at 08:00 PM BRST",
+        lat: "-23.698959",
+        long: "-46.507141",
+        …
+    }
+condition
+    : {
+        code: "26",
+        date: "Mon, 30 Jan 2017 08:00 PM BRST",
+        temp: "22",
+        text: "Cloudy"
+    }
+code
+    :
+    "26"
+date
+    :
+    "Mon, 30 Jan 2017 08:00 PM BRST"
+temp
+    :
+    "22"
+text
+    :
+    "Cloudy"
+description
+    :
+    "<![CDATA[<img src="
+http: //l.yimg.com/a/i/us/we/52/26.gif"/>↵<BR />↵<b>Current Conditions:</b>↵<BR />Cloudy↵<BR />↵<BR />↵<b>Forecast:</b>↵<BR /> Mon - Thunderstorms. High: 25Low: 19↵<BR /> Tue - Thunderstorms. High: 23Low: 19↵<BR /> Wed - Thunderstorms. High: 23Low: 18↵<BR /> Thu - Thunderstorms. High: 24Low: 19↵<BR /> Fri - Thunderstorms. High: 25Low: 19↵<BR />↵<BR />↵<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-449139/">Full Forecast at Yahoo! Weather</a>↵<BR />↵<BR />↵(provided by <a href="http://www.weather.com" >The Weather Channel</a>)↵<BR />↵]]>"
+    forecast: [{
+        code: "4",
+        date: "30 Jan 2017",
+        day: "Mon",
+        high: "25",
+        low: "19",
+        text: "Thunderstorms"
+    }, …]
+0
+    : {
+        code: "4",
+        date: "30 Jan 2017",
+        day: "Mon",
+        high: "25",
+        low: "19",
+        text: "Thunderstorms"
+    }
+code
+    :
+    "4"
+date
+    :
+    "30 Jan 2017"
+day
+    :
+    "Mon"
+high
+    :
+    "25"
+low
+    :
+    "19"
+text
+    :
+    "Thunderstorms"
+1
+    : {
+        code: "4",
+        date: "31 Jan 2017",
+        day: "Tue",
+        high: "23",
+        low: "19",
+        text: "Thunderstorms"
+    }
+2
+    : {
+        code: "4",
+        date: "01 Feb 2017",
+        day: "Wed",
+        high: "23",
+        low: "18",
+        text: "Thunderstorms"
+    }
+3
+    : {
+        code: "4",
+        date: "02 Feb 2017",
+        day: "Thu",
+        high: "24",
+        low: "19",
+        text: "Thunderstorms"
+    }
+4
+    : {
+        code: "4",
+        date: "03 Feb 2017",
+        day: "Fri",
+        high: "25",
+        low: "19",
+        text: "Thunderstorms"
+    }
+5
+    : {
+        code: "47",
+        date: "04 Feb 2017",
+        day: "Sat",
+        high: "23",
+        low: "20",
+        text: "Scattered Thunderstorms"
+    }
+6
+    : {
+        code: "47",
+        date: "05 Feb 2017",
+        day: "Sun",
+        high: "23",
+        low: "19",
+        text: "Scattered Thunderstorms"
+    }
+7
+    : {
+        code: "47",
+        date: "06 Feb 2017",
+        day: "Mon",
+        high: "23",
+        low: "20",
+        text: "Scattered Thunderstorms"
+    }
+8
+    : {
+        code: "47",
+        date: "07 Feb 2017",
+        day: "Tue",
+        high: "22",
+        low: "20",
+        text: "Scattered Thunderstorms"
+    }
+9
+    : {
+        code: "47",
+        date: "08 Feb 2017",
+        day: "Wed",
+        high: "25",
+        low: "21",
+        text: "Scattered Thunderstorms"
+    }
+guid
+    : {
+        isPermaLink: "false"
+    }
+lat
+    :
+    "-23.698959"
+link
+    :
+    "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-449139/"
+long
+    :
+    "-46.507141"
+pubDate
+    :
+    "Mon, 30 Jan 2017 08:00 PM BRST"
+title
+    :
+    "Conditions for Santo Andre, SP, BR at 08:00 PM BRST"
+language
+    :
+    "en-us"
+lastBuildDate
+    :
+    "Mon, 30 Jan 2017 09:30 PM BRST"
+link
+    :
+    "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-449139/"
+location
+    : {
+        city: "Santo Andre",
+        country: "Brazil",
+        region: " SP"
+    }
+city
+    :
+    "Santo Andre"
+country
+    :
+    "Brazil"
+region
+    :
+    " SP"
+title
+    :
+    "Yahoo! Weather - Santo Andre, SP, BR"
+ttl
+    :
+    "60"
+units
+    : {
+        distance: "km",
+        pressure: "mb",
+        speed: "km/h",
+        temperature: "C"
+    }
+wind
+    : {
+        chill: "72",
+        direction: "135",
+        speed: "17.70"
+    }

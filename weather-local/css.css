@@ -1,0 +1,140 @@
+*{
+    width: 99%;
+    margin: auto;
+}
+
+body{
+    background-color: #300e6b;
+}
+
+i {
+    color: white;
+}
+
+.wrapper{
+    width: 50%;
+    margin-top: 7%;
+    border : 3px solid white;
+}
+
+#title{
+    text-align: center;
+    margin-top: 3.5%;
+    font-size: 2vw;
+    color: lightgrey;
+    font-weight: 900;
+}
+
+.myCity{
+    font-style: italic;
+    width: 100%;   
+    color: darkgoldenrod; 
+}
+
+.date{
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-top: 2%;
+}
+
+#cond-now{
+    text-align: center;
+    width: 50%;
+    margin-top: 12%;
+}
+
+.temp-now{
+    color: darkorange;
+    font-size: 7vw;
+    font-weight: bold;
+}
+
+#icon-now{
+    margin-top: 3.5%;
+    font-size: 70px;
+}
+
+#temp-today{
+    text-align: center;
+    width: 70%;    
+    margin-top: 15%;
+    font-size: 5vw;
+    clear: both;
+    color: white;    
+}
+
+.max{
+    float: left;
+    font-weight: bold;
+    width: 45%;
+    background-color: red;
+    padding: 2%;
+}
+.min{
+    float: left;
+    font-weight: bold;
+    width: 45%;
+    background-color: blue;   
+    padding: 2%; 
+}
+
+.fore{
+    width: 90%;
+    clear: both;
+    margin-top: 40%;
+    color: white;
+}
+
+.fore-line{
+
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 100%;    
+    font-size: 2vw;
+    margin: 3%;
+    clear: both;
+}
+
+.fore-day{
+    width: 10%;
+    float: left;
+    color: darkgoldenrod;
+}
+
+.fore-date{ 
+    float: left;
+    width: 25%;
+    color: darkgoldenrod;
+    margin-left: 2%;
+}
+
+.fore-min{
+    float: left;
+    width: 15%;
+    margin-left: 2%;
+    background-color: blue;
+}
+
+.fore-max{
+    float: left;
+    width: 15%;
+    margin-left: 2%;
+    background-color: red;
+}
+
+.fore-icon{
+    float: left;
+    width: 5%;
+    margin-left: 5%;
+    font-size: 150%;
+}
+
+footer{
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+

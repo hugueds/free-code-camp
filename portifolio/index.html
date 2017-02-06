@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hugueds - Portifolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav navbar-inverse ">
+        <div class="container-fluid">
+            <div id='navbar-name'>
+                <h3>Hugueds</h3>
+            </div>
+            <div class="navbar-links">
+                <ul>
+                    <li class="navbar-bot" id='about-link'> ABOUT </li>
+                    <li class="navbar-bot" id='portifolio-link'>PORTIFOLIO</li>
+                    <li class="navbar-bot" id='social-link'>SOCIAL</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <header class="img-box">
+            <img class="image-responsive" src="http://f.fwallpapers.com/images/computer-technology.jpg" width="1000" height="650" />
+        </header>
+        <section id='about'>
+            <div class="title-box">
+                <h2>ABOUT</h2>
+            </div>
+            <div class="content-box">
+                <p>Preserved defective offending he daughters on or. Rejoiced prospect yet material servants out answered men
+                    admitted. Sportsmen certainty prevailed suspected am as. Add stairs admire all answer the nearer yet
+                    length. Advantages prosperous remarkably my inhabiting so reasonably be if. Too any appearance announcing
+                    impossible one. Out mrs means heart ham tears shall power every. To shewing another demands to. Marianne
+                    property cheerful informed at striking at. Clothes parlors however by cottage on. In views it or meant
+                    drift to. Be concern parlors settled or do shyness address. Remainder northward performed out for moonlight.
+                    Yet late add name was rent park from rich. He always do do former he highly. </p>
+            </div>
+        </section>
+        <section id='portifolio'>
+            <div class="title-box">
+                <h2>PORTIFOLIO</h2>
+            </div>
+            <div class="content-box">
+                <div class="row">
+                    <div class="col-sm-6 col-md-5 thumb-job">
+                        <div class="thumbnail">
+                            <img src="http://lorempixel.com/output/food-q-c-640-480-3.jpg" alt="">
+                            <div class="caption">
+                                <h3>JOB #1</h3>
+                                <p>The description of this job</p>
+                                <p>
+                                    <a class="btn btn-default" role="button">VISIT</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 thumb-job">
+                        <div class="thumbnail">
+                            <img src="http://lorempixel.com/output/animals-q-c-640-480-6.jpg" alt="">
+                            <div class="caption">
+                                <h3>JOB #2</h3>
+                                <p>The description of this job</p>
+                                <p>
+                                    <a class="btn btn-default" role="button">VISIT</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 thumb-job">
+                        <div class="thumbnail">
+                            <img src="http://lorempixel.com/output/city-q-c-640-480-6.jpg" alt="">
+                            <div class="caption">
+                                <h3>JOB #3</h3>
+                                <p>The description of this job</p>
+                                <p>
+                                    <a class="btn btn-default" role="button">VISIT</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 thumb-job">
+                        <div class="thumbnail">
+                            <img src="http://lorempixel.com/output/nightlife-q-c-640-480-3.jpg" alt="">
+                            <div class="caption">
+                                <h3>JOB #4</h3>
+                                <p>The description of this job</p>
+                                <p>
+                                    <a class="btn btn-default" role="button">VISIT</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id='social'>
+            <div class="title-box">
+                <h2>SOCIAL</h2>
+            </div>
+            <div class="social-badge">
+                <img src="fb.png" alt="" width="150" height="90" />
+            </div>
+            <div class="social-badge">
+                <img src="linkedin.png" alt="" width="100" height="100" />
+            </div>
+            <div class="social-badge">
+                <img src="github.png" alt="" width="100" height="100" />
+            </div>
+        </section>
+    </div>
+    <div class="end-bar">
+        <footer class="text-center">CREATED BY HUGUEDS - 2017</footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function (event) {
+            init();
+        });
+
+
+
+        function init() {
+            $('.navbar-bot').on('click', function () {
+                var _id = '#' + this.id.replace('-link', '');
+                var pos = $(_id).position().top;
+                pos -= 60;
+                $(window).scrollTop(pos);
+            })
+
+            $('#navbar-name').on('click', function () {
+                $(window).scrollTop(0);
+            })
+        }
+    </script>
+</body>
+
+</html>
