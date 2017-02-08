@@ -1,0 +1,35 @@
+html{
+    max-width: 99.5%;
+}
+
+body{
+    background-color:beige;
+}
+
+input{
+    margin-top: 1%;
+}
+
+
+.wrapper{
+    width: 80%;
+}
+.search-input{
+    position: relative;
+    margin-top: 250px;
+}
+
+.res-body{
+    position: relative;
+    float: left;
+    width: 80%;
+    margin-top: -180px;
+    
+}
+
+.topic{
+    border: 2px solid black;    
+    padding: 1%;
+    background-color: white;
+    margin-top: 2%;
+}
