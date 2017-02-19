@@ -59,7 +59,7 @@ i {
     text-align: center;
     width: 70%;    
     margin-top: 15%;
-    font-size: 5vw;
+    font-size: 4vw;
     clear: both;
     color: white;    
 }
@@ -129,6 +129,14 @@ i {
     width: 5%;
     margin-left: 5%;
     font-size: 150%;
+}
+
+#bot-change{
+    height: 50px;
+    margin-bottom: 10%;
+    font-weight: bold;
+    font-size: 4vw;
+    width: 50%;
 }
 
 footer{

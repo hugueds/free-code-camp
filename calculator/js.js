@@ -1,35 +1,54 @@
 var display = $('.display');
-var sub = $('.sub-display')
+var sub = $('.sub-display');
+
 var expression = '';
 var oper = [];
 var result = '';
+var ac = false;
+var confirm = false;
 
-
-$(document).ready(function(e){
+$(document).ready(function (e) {
 	display.text('0');
+	sub.text('0');
 });
 
 
-$('.bot-number').on('click', function(e){
+$('.bot-number').on('click', function (e) {
 	var v = $(this).text();
+	if (confirm) {
+		display.text('')
+		sub.text('')
+		confirm = false;
+	}
 	display.text() === '0' ? display.text('') : display.text();
 	addToDisplay(v);
 });
 
-$('.bot-function').on('click', function(e){
-	var txt = display.text();
-	if (txt == '0') return;
+$('.bot-function').on('click', function (e) {
+	var ds = display.text();
 	var sig = $(this).text();
-	if (sig == '\=') return;	
-	var s = sub.text();	
-	sub.text(s + txt + sig);
+	if (ds == '0') return;
+	oper.push(ds);
+	oper.push(sig);
 	display.text('0');
+	sub.text(oper.join(''));
 });
 
-$('#equals').on('click', function(e){
-	var a = sub.text().slice(0,-1);	
-	result = eval(a);
+
+
+$('#equals').on('click', function (e) {
+	var ds = display.text();
+	var sig = $(this).text();
+	oper.push(ds);
+	oper.push(sig);
+	console.log(oper)
+	sub.text(oper.join(''));
+	var expression = oper.join('').slice(0, -1);
+	result = eval(expression);
 	display.text(result);
+	confirm = true;
+	oper = [];
+	oper.push(result);
 });
 
 
@@ -39,21 +58,30 @@ $('#equals').on('click', function(e){
 //0 + 4
 //4
 
-$('.bot-clear').on('click', function(e){
+$('.bot-clear').on('click', function (e) {
 	clear();
 });
 
 //args.push(parseFloat(num));
 
-function addToDisplay(num){
+function addToDisplay(num) {
 	var curr = display.text();
 	if (curr.length > 7) return console.log("Size is at Max");
-	display.text(curr+num);	
+	display.text(curr + num);
+	//sub.text(curr+num);
 }
 
-function clear(){
+function clear() {
 	display.text('0');
-	args = [];
+	if (ac) {
+		oper = [];
+		//sub.text('0');
+		ac = false;
+	} else {
+		ac = true;
+		sub.text('0');
+	}
+
 }
 
 
@@ -80,7 +108,7 @@ function clear(){
 
 
 
-function c(d){
-	for(var i=0;i<arguments.length;i++)
+function c(d) {
+	for (var i = 0; i < arguments.length; i++)
 		console.log(arguments[i]);
 }

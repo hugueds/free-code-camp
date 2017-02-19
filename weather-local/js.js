@@ -1,15 +1,34 @@
-var key = 'b0kjmp7gykmshKBKKIq9pHUTvQl7p1plbqXjsnS5FPtECsg65I';
+const key = 'b0kjmp7gykmshKBKKIq9pHUTvQl7p1plbqXjsnS5FPtECsg65I';
 var lat, lng;
+const scales = {
+    "celsius" : 'ºC',
+    "farenheit" : 'ºF'
+};
+
+var currScale = scales["celsius"];
+//var currScale = scales["farenheit"];
 
 $(document).ready(function () {
     var geo = navigator.geolocation.getCurrentPosition(success, error);
+    $('#bot-change').on('click', function(e){
+        currScale == 'ºC' ? $(this).text(scales["celsius"]) : $(this).text(scales["farenheit"]);
+        currScale == 'ºC' ? currScale = scales["farenheit"] : currScale = scales["celsius"];        
+        getWeather();
+        c(currScale)     
+    });
 });
 
-function Weather(data) {
+function Weather(data) {    
     this.forecast = data.item.forecast;
     this.foreToday = data.item.forecast[0];
     this.today = data.item.condition;
-    this.locations = data.location;
+    this.locations = data.location;    
+    if (currScale == 'ºC') return this; 
+    else{      
+        this.today.temp = toFarenheit(this.today.temp);
+        this.foreToday.high = toFarenheit(this.foreToday.high);
+        this.foreToday.low = toFarenheit(this.foreToday.low);
+    }    
     return this;
 }
 
@@ -27,8 +46,7 @@ function getWeather() {
             var data = JSON.parse(data);
             data = data.query.results.channel;
             getToday(data);            
-            getFore(data);      
-               
+            getFore(data);                     
         }
     });
 }
@@ -57,24 +75,25 @@ function getIcon(cond) {
         "Partly Cloudy": "wi wi-day-cloudy",
         "Scattered Showers": "wi wi-day-showers"
     }
-    return icon[cond]
+    return icon[cond];
 }
 
 function getToday(data) {
     var w = new Weather(data);
-    var icon = getIcon(w.today.text);
+    var icon = getIcon(w.foreToday.text);    
     var date = w.today.date.slice(0,-5).toLocaleString();
     $(".myCity").html(w.locations.city + ' - ' + w.locations.region + ' / ' + w.locations.country);
     $('.date').html(date);
-    $('#temp-today .max').html(w.foreToday.high + ' ºC');
-    $('#temp-today .min').html(w.foreToday.low + ' ºC');
-    $('#cond-now .temp-now').html(w.today.temp + ' ºC');    
+    $('#temp-today .max').html(w.foreToday.high + currScale);
+    $('#temp-today .min').html(w.foreToday.low + currScale);
+    $('#cond-now .temp-now').html(w.today.temp + currScale);    
     $('#icon-now').addClass(icon);
 }
 
 function getFore(data) {
-    var w = new Weather(data);
-    c(w);    
+    var w = new Weather(data);    
+    $('.fore').html('');
+    $('.fore-line').html('');
     for (day in w.forecast) {
         if (day == 0) continue;
         var icon = getIcon(w.forecast[day].text);        
@@ -89,6 +108,15 @@ function getFore(data) {
      
 }
 
+
+function toFarenheit(temp){
+    temp = parseFloat(temp, 10);
+    return (temp * 9/5) + 32;
+}
+
+function toCelsius(temp){
+    return (temp  - 32) * (5/9);
+}
 
 
 function c() {

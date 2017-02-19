@@ -7,7 +7,7 @@ body {
 .calc {
 	position: relative;
 	background-color: black;
-	width: 25%;
+	width: 50%;
 	margin: auto;
 	height: 350px;
 }
@@ -35,7 +35,7 @@ body {
 	margin-right: auto;
 	margin-top: 10%;
 	text-align: right;
-	font-size: 100%;
+	font-size: 200%;
 }
 
 .bot {
