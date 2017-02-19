@@ -78,16 +78,30 @@ function getIcon(cond) {
     return icon[cond];
 }
 
+function getBg(cond){
+    var bg = {
+        "Thunderstorms": 'https://dreamlandia.com/images/T/thunderstorm.jpg',
+        "Scattered Thunderstorms": "https://dreamlandia.com/images/T/thunderstorm.jpg",
+        "Showers": "https://s-media-cache-ak0.pinimg.com/originals/49/00/05/4900051c6f4da2f5e55cc87878b7f1e5.jpg",
+        "Partly Cloudy": "http://combiboilersleeds.com/images/cloudy/cloudy-8.jpg",
+        "Scattered Showers": "https://s-media-cache-ak0.pinimg.com/originals/49/00/05/4900051c6f4da2f5e55cc87878b7f1e5.jpg",
+        "Sunny": 'https://cdn.pixabay.com/photo/2015/05/30/19/55/desert-790640_960_720.jpg'
+    }
+    return bg[cond]
+}
+
 function getToday(data) {
     var w = new Weather(data);
-    var icon = getIcon(w.foreToday.text);    
-    var date = w.today.date.slice(0,-5).toLocaleString();
+    var icon = getIcon(w.foreToday.text); 
+    var bg = getBg(w.foreToday.text);
+    var date = w.today.date.slice(0,-5).toLocaleString();    
     $(".myCity").html(w.locations.city + ' - ' + w.locations.region + ' / ' + w.locations.country);
     $('.date').html(date);
     $('#temp-today .max').html(w.foreToday.high + currScale);
     $('#temp-today .min').html(w.foreToday.low + currScale);
     $('#cond-now .temp-now').html(w.today.temp + currScale);    
     $('#icon-now').addClass(icon);
+    $('body').css('background-image', "url("+ bg + ")");
 }
 
 function getFore(data) {
