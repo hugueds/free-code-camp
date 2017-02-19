@@ -1,12 +1,10 @@
+var api = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=';
+var link = 'https://en.wikipedia.org/?curid=';
+const rndLink = 'https://en.wikipedia.org/wiki/Special:Random';
+
+
 $(document).ready(function (e) {
 
-});
-
-
-$('#abc').on('click', function (e) {
-    $('#abc').animate({
-        left: '500px'
-    });
 });
 
 
@@ -22,32 +20,27 @@ $('form').on('submit', function (e) {
     
 });
 
-
 function getData(search) {
     $.ajax({
-        url: '//en.wikipedia.org/w/api.php',
-        data: {
-            action: 'query',
-            list: 'search',
-            srsearch: search,
-            format: 'json'
-        },
+        url: api + search ,        
         dataType: 'jsonp',
         success: success
     });
 }
 
-function success(data) {
-    var results = data.query.search;
-    results.map(function (a) {        
+function success(data) {    
+    console.log(data.query);    
+    var results = data.query.pages;    
+    for (key in results){
+        var curr = results[key];        
+        console.log(curr)         
         var div = $('<div></div>').addClass('topic');
-        var title = $('<h3></h3>').addClass('s-title').text(a.title);
-        var snp = $('<h5></h5>').addClass('s-title').html(a.snippet);
+        var title = $('<a href='+link+curr.pageid+'><h3></h3></a>').addClass('s-title').text(curr.title);
+        var snp = $('<h5></h5>').addClass('s-title').html(curr.extract);
         div.append(title);
         div.append(snp);
-        $('.res-body').append(div);        
-    });
-    
+        $('.res-body').append(div);   
+    }   
 }
 
 function clean(callback){

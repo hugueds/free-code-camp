@@ -33,3 +33,14 @@ input{
     background-color: white;
     margin-top: 2%;
 }
+
+
+.topic:hover{
+    background-color: silver;
+    cursor: pointer;
+}
+
+
+#bot-random{
+    margin-top: 2%;
+}
